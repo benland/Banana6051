@@ -1,0 +1,104 @@
+<div class="text-center" ng-show="loading > 0">
+	<img src="img/ajax-loader.gif" class="img-centered">
+</div>
+<div ng-show="user" class="hero-unit pull-left" style="padding:12px;margin: 20px auto 20px auto">
+	<div class="row-fluid">
+		<div class="span3">
+			<img ng-src="{{user.profile_image_url_https}}" class="img-polaroid" >
+			<div class="btn btn-danger btn-mini" ng-click="signout()">Signout</div>
+		</div>
+		<div class="span9">
+			<h3 style="line-height:0">
+				@<a href="" ng-bind-template="{{user.screen_name}}" style="color: {{user.profile_link_color}}"></a>
+				<br>
+			</h3>
+			<small>{{user.name}}</small>
+			<div class="row-fliid show-grid">
+				<div class="span4" style="border-right:1px solid #999999">
+					<b>{{user.statuses_count}}</b>
+					<div class="muted" style="font-size:10px;line-height: 0px">
+						TWEETS
+					</div>
+				</div>
+				<div class="span4" style="border-right:1px solid #999999">
+					<b>{{user.friends_count}}</b>
+					<div class="muted" style="font-size:10px;line-height: 0px">
+						FOLLOWING
+					</div>
+				</div>
+				<div class="span4">
+					<b>{{user.followers_count}}</b>
+					<div class="muted" style="font-size:10px;line-height: 0px">
+						FOLLOWERS
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container row=fluid" style="padding-top: 20px;">
+	<from class="form-search sapn8 row-fluid" ng-form="seachForm">
+		<div class="input-append row-fluid" style="margin-bottom: 25px;">
+			<input type="text" placeholder="Please enter text for search (text, hashtags or mentions)" ng-model="seachField" class="span11 search-query" ui-keypress="{enter: 'search()'}" required>
+			<button class="btn" ng-click="search()" ng-disabled="loading > 0 || !seachForm.$valid">Search</button>
+		</div>
+		<accordion close-others="false" ng-repeat="history in searchHistory">
+			<div class="row-fluid">
+				<div class="span11">
+					<accordion-group heading="{{history.name}}" is-open="history.open">
+						<div>
+							<ul class="unstyled" >
+								<li ng-repeat="twitt in history.newtwittes">
+									<div class="row-fluid" style="padding-bottom:15px; background-color :#dff0d8;">
+										<div class="span4 offset1">
+											<div class="row-fluid container">
+												<div class="span4">
+													<img class="img-polaroid" ng-src="{{twitt.user.profile_image_url_https}}"></img>
+												</div>
+												<div class="span8">
+													<h4 style="margin:0 0 10px 0;">{{twitt.user.name}}</h4>
+													<div am-time-ago="twitt.created_at" class="muted" style="font-size:12px;"></div>
+												</div>
+											</div>
+										</div>
+
+										<div class="span7">
+											<div class="row-fluid container" ng-bind-html="twitt | entities" ></div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<ul class="unstyled">
+								<li ng-repeat="twitt in history.twittes">
+									<div class="row-fluid" style="padding-bottom:15px;">
+										<div class="span4 offset1">
+											<div class="row-fluid container">
+												<div class="span4">
+													<img class="img-polaroid" ng-src="{{twitt.user.profile_image_url_https}}"></img>
+												</div>
+												<div class="span8">
+													<h4 style="margin:0 0 10px 0;">{{twitt.user.name}}</h4>
+													<div am-time-ago="twitt.created_at" class="muted" style="font-size:12px;"></div>
+												</div>
+											</div>
+										</div>
+										<div class="span7">
+											<div class="row-fluid container" ng-bind-html="twitt | entities" ></div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+				    </accordion-group>
+				</div>
+				<div class="span1">
+					<a href="" ng-click="remove($index)" class="text-center btn btn-link" style="font-size:10px;"><i class="icon-trash"></i>Remove</a>
+				</div>
+			</div>
+		  </accordion>
+	</from>
+</div>
+
+
+
+
