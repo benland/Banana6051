@@ -6,8 +6,8 @@ This app was create as an Angular exercise.
 Create an AngularJS application which provides the following functionality:
 
    	1. The user logs in using his Twitter account
-	2. The user can then search (https://dev.twitter.com/docs/api/1.1/get/search/tweets) for tweets. The top 20 results
-	   should be displayed.
+	2. The user can then search (https://dev.twitter.com/docs/api/1.1/get/search/tweets) for tweets.
+	   The top 20 results should be displayed.
 	3. The user’s last 5 search results are saved, so that when the user closes the browser and reopens it, he can 
 	   expand each saved query to see its results.
 Things to consider:
