@@ -8,13 +8,13 @@ Create an AngularJS application which provides the following functionality:
    	1. The user logs in using his Twitter account
 	2. The user can then search (https://dev.twitter.com/docs/api/1.1/get/search/tweets) for tweets.
 	   The top 20 results should be displayed.
-	3. The user’s last 5 search results are saved, so that when the user closes the browser and reopens it, he can 
-	   expand each saved query to see its results.
+	3. The user’s last 5 search results are saved, so that when the user closes the browser and reopens 
+	   it, he can expand each saved query to see its results.
 Things to consider:
 
 	1. The UI is up to you – design it as you see fit (recommendation – bootstrap).
-	2. When implementing the history – make sure the user can see data as soon as possible when expanding a previous query,
-	   while also making sure he’ll also see any changes in the results since the last query.
+	2. When implementing the history – make sure the user can see data as soon as possible when expanding
+	   a previous query, while also making sure he’ll also see any changes in the results since the last query.
 
 Demo:
 =====
