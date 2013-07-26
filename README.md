@@ -14,7 +14,8 @@ Things to consider:
 
 	1. The UI is up to you – design it as you see fit (recommendation – bootstrap).
 	2. When implementing the history – make sure the user can see data as soon as possible when expanding
-	   a previous query, while also making sure he’ll also see any changes in the results since the last query.
+	   a previous query, while also making sure he’ll also see any changes in the results since the last
+           query.
 
 Demo:
 =====
