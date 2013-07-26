@@ -23,7 +23,7 @@ Demo:
 Working example of this app can be found at <http://twangular.comule.com>
 
 
-This app uses the following:
+This application is using the following:
 ============================
 
 - AngularJS
@@ -76,6 +76,15 @@ Scripts Files explained:
 - login.js - The login controller - has the sign in method.
 
 - search.js - The search controller - The search main login - do the search and handle the history of the search.
+
+
+FireBase:
+=========
+
+I used [Firebase](https://www.firebase.com/) as the real-time data base engine.
+Every user can access (read and write) <b>only</b> his data.
+
+You can read more about it in the  [firebase security documentation](https://www.firebase.com/docs/security/security-rules.html).
 
 
 
