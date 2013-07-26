@@ -1,7 +1,7 @@
 Twangular
 =========
 
-This app was create as an Angular exercise.
+This app was created as an Angular exercise.
 
 Create an AngularJS application which provides the following functionality:
 
@@ -38,7 +38,7 @@ This app uses the following:
 
 
 
-**I used yeoman boilerplate to the head start.
+**I used yeoman boilerplate for the head start.
 During development I also used bower and grunt(also helped with deployment).**
 
 
@@ -62,7 +62,7 @@ Scripts Files explained:
 - app.js - The module main configuration file. contains :
 	- The declaration of the modules the application is using.
 	- The declaration of the constants the application is using.
-	- The application routs.
+	- The application routes.
 	- New filter (entities) declaration - takes twitt object and make the relevant entities as links.
 	- TwitterConnectorService - Service used to connect to twitter and the firebase according to the user.
 		- Methods:
@@ -86,5 +86,5 @@ Scripts Files explained:
 
 Next to come (if I will have time):
 ===================================
-Angular directive that is used to show user twitt and directive to show user details.
+Angular directive that will show a twitt and directive to show user details.
 
